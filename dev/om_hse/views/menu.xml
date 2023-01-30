@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_hse_root"
+        name="Hse"
+        sequence="10"/>
+
+    <menuitem id="menu_hse_operations"
+        name="Operations"
+        sequence="10"
+        parent="menu_hse_root"/>
+
+    <menuitem id="menu_courseworks"
+        name="Courseworks"
+        sequence="10"
+        parent="menu_hse_operations"/>
+</odoo>

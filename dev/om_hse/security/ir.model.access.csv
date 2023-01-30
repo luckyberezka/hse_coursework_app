@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+om_hse.access_hse_coursework,access_hse_coursework,om_hse.model_hse_coursework,base.group_user,1,1,1,1

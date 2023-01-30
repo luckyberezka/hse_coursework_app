@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hse_coursework_form" model="ir.ui.view">
+        <field name="name">hse.coursework.form</field>
+        <field name="model">hse.coursework</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="en_title"/>
+                        <field name="ru_title"/>
+                        <field name="description"/>
+                        <field name="education_level"/>
+                        <field name="branch"/>
+                        <field name="faculty"/>
+                        <field name="educational_program"/>
+                        <field name="language"/>
+                        <field name="coursework_type"/>
+                        <field name="coursework_format"/>
+                        <field name="course"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"
+                           options="{'post_refresh': 'recipients'}"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_hse_coursework_tree" model="ir.ui.view">
+        <field name="name">hse.coursework.tree</field>
+        <field name="model">hse.coursework</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="en_title"/>
+                <field name="faculty"/>
+                <field name="coursework_format"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_hse_coursework" model="ir.actions.act_window">
+        <field name="name">Courseworks</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hse.coursework</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_courseworks"
+              name="Courseworks"
+              sequence="10"
+              action="action_hse_coursework"
+              parent="menu_hse_operations"/>
+</odoo>
