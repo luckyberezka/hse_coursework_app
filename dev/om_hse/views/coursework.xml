@@ -8,8 +8,9 @@
                 <sheet>
                     <group>
                         <field name="en_title"/>
-                        <field name="ru_title"/>
-                        <field name="description"/>
+                        <field name="is_approved"/>
+                        <!-- <field name="ru_title"/> -->
+                        <!-- <field name="description"/>
                         <field name="education_level"/>
                         <field name="branch"/>
                         <field name="faculty"/>
@@ -17,7 +18,7 @@
                         <field name="language"/>
                         <field name="coursework_type"/>
                         <field name="coursework_format"/>
-                        <field name="course"/>
+                        <field name="course"/> -->
                     </group>
                 </sheet>
                 <div class="oe_chatter">
@@ -36,8 +37,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="en_title"/>
-                <field name="faculty"/>
-                <field name="coursework_format"/>
+                <!-- <field name="faculty"/>
+                <field name="coursework_format"/> -->
             </tree>
         </field>
     </record>
