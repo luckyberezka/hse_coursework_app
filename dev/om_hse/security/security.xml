@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_hse_student" model="res.groups">
+        <field name="name">Student</field>
+        <field name="category_id" ref="base.module_category_hse_coursework_users"/>
+    </record>
+
+    <record id="group_hse_teacher" model="res.groups">
+        <field name="name">Teacher</field>
+        <field name="category_id" ref="base.module_category_hse_coursework_users"/>
+    </record>
+
+    <record id="group_hse_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="base.module_category_hse_coursework_users"/>
+    </record>
+
+    <record id="rule_hse_teacher_update" model="ir.rule">
+        <field name="name">Only authors can update their own submissions</field>
+        <field name="model_id" ref="model_hse_coursework"/>
+        <field name="perm_read" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="groups" eval="[Command.link(ref('group_hse_teacher'))]"/>
+        <field name="domain_force">[
+            ('create_uid', '=', user.id)
+        ]</field>
+    </record>
+
+    <record id="rule_hse_student_access" model="ir.rule">
+        <field name="name">Students only see approved projects</field>
+        <field name="model_id" ref="model_hse_coursework"/>
+        <field name="groups" eval="[Command.link(ref('group_hse_student'))]"/>
+        <field name="domain_force">[
+            ('is_approved', '=', True)
+        ]</field>
+    </record>
+
+</odoo>
