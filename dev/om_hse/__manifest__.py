@@ -4,10 +4,10 @@
     'category': 'HSE Coursework/Users',
     'depends': ['mail'],
     'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/menu.xml',
         'views/coursework.xml',
-        'security/ir.model.access.csv',
-        'security/security.xml',
     ],
     'application': True,
     'installable': True,
