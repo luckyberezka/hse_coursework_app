@@ -5,12 +5,19 @@
         <field name="model">hse.coursework</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_on_approval" string="Submit For Approval" type="object" groups="om_hse.group_hse_teacher" states="draft,rejected"/>
+                    <button name="action_approve" string="Approve" type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
+                    <button name="action_rejected" string="Reject" type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
+                    <field name="state" widget="statusbar" nolabel="1"
+                           statusbar_visible="draft,on_approval,enrolling_participants,enrollment_complete"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="en_title"/>
                         <field name="is_approved"/>
-                        <!-- <field name="ru_title"/> -->
-                        <!-- <field name="description"/>
+                        <field name="ru_title"/>
+                        <field name="description"/>
                         <field name="education_level"/>
                         <field name="branch"/>
                         <field name="faculty"/>
@@ -18,7 +25,7 @@
                         <field name="language"/>
                         <field name="coursework_type"/>
                         <field name="coursework_format"/>
-                        <field name="course"/> -->
+                        <field name="course"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter">
