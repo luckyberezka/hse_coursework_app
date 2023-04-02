@@ -12,6 +12,7 @@
                             type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
                     <button name="%(om_hse.action_reject_project)d" string="Reject"
                             type="action" groups="om_hse.group_hse_manager" states="on_approval"/>
+
 <!--                    <button name="action_rejected" string="Reject"-->
 <!--                            type="object" groups="om_hse.group_hse_manager" states="on_approval"/>-->
                     <field name="state" widget="statusbar" nolabel="1"
