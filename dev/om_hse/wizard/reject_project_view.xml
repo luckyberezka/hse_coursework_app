@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_reject_project_form" model="ir.ui.view">
+        <field name="name">reject.project.wizard.form</field>
+        <field name="model">reject.project.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="reason"/>
+                    </group>
+                    <group>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_reject" string="Reject Project" type="object" class="btn-primary"/>
+                    <button special="cancel" string="Discard" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_reject_project" model="ir.actions.act_window">
+        <field name="name">Reject Project</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">reject.project.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

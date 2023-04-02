@@ -7,8 +7,13 @@
             <form>
                 <header>
                     <button name="action_on_approval" string="Submit For Approval" type="object" groups="om_hse.group_hse_teacher" states="draft,rejected"/>
-                    <button name="action_approve" string="Approve" type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
-                    <button name="action_rejected" string="Reject" type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
+                    <button name="action_approve" string="Approve"
+                            confirm="Are you sure you want to approve this topic?"
+                            type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
+                    <button name="%(om_hse.action_reject_project)d" string="Reject"
+                            type="action" groups="om_hse.group_hse_manager" states="on_approval"/>
+<!--                    <button name="action_rejected" string="Reject"-->
+<!--                            type="object" groups="om_hse.group_hse_manager" states="on_approval"/>-->
                     <field name="state" widget="statusbar" nolabel="1"
                            statusbar_visible="draft,on_approval,enrolling_participants,enrollment_complete"/>
                 </header>
@@ -42,10 +47,19 @@
         <field name="name">hse.coursework.tree</field>
         <field name="model">hse.coursework</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-success="state == 'enrolling_participants'"
+                  decoration-danger="state == 'rejected'"
+                  decoration-warning="state == 'on_approval'"
+                  decoration-info="state == 'enrollment_complete'">
                 <field name="en_title"/>
-                <!-- <field name="faculty"/>
-                <field name="coursework_format"/> -->
+                <field name="faculty"/>
+                <field name="coursework_format"/>
+                <field name="state"
+                       decoration-success="state == 'enrolling_participants'"
+                       decoration-danger="state == 'rejected'"
+                       decoration-warning="state == 'on_approval'"
+                       decoration-info="state == 'enrollment_complete'"
+                       widget="badge"/>
             </tree>
         </field>
     </record>

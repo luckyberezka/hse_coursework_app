@@ -6,6 +6,7 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'wizard/reject_project_view.xml',
         'views/menu.xml',
         'views/coursework.xml',
     ],

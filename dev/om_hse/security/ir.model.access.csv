@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hse_coursework_student,hse.coursework.student,model_hse_coursework,group_hse_student,1,0,0,0
 access_hse_coursework_teacher,hse.coursework.teacher,model_hse_coursework,group_hse_teacher,1,1,1,1
 access_hse_coursework_manager,hse.coursework.manager,model_hse_coursework,group_hse_manager,1,1,1,1
+access.reject.project.wizard,access_reject_project_wizard,om_hse.model_reject_project_wizard,base.group_user,1,1,1,1
+access.hse.coursework,access_hse_coursework,om_hse.model_hse_coursework,base.group_user,1,1,1,1
