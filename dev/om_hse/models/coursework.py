@@ -64,7 +64,7 @@ class HseCoursework(models.Model):
         string='Status',
         required=True,
     )
-    owner = fields.Char(string='Title(en)', required=True, tracking=True)
+    # owner = fields.Char(string='Title(en)', required=True, tracking=True)
 
     @api.model_create_multi
     def create(self, vals_list):
