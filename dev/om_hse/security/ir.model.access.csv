@@ -3,6 +3,10 @@ access_hse_coursework_student_ami1,hse.coursework.student_ami1,model_hse_coursew
 access_hse_coursework_student_ami2,hse.coursework.student_ami2,model_hse_coursework,group_hse_student_ami2,1,0,0,0
 access_hse_coursework_student_ami3,hse.coursework.student_ami3,model_hse_coursework,group_hse_student_ami3,1,0,0,0
 access_hse_coursework_student_ami4,hse.coursework.student_ami4,model_hse_coursework,group_hse_student_ami4,1,0,0,0
+access_hse_coursework_student_se1,hse.coursework.student_se1,model_hse_coursework,group_hse_student_se1,1,0,0,0
+access_hse_coursework_student_se2,hse.coursework.student_se2,model_hse_coursework,group_hse_student_se2,1,0,0,0
+access_hse_coursework_student_se3,hse.coursework.student_se3,model_hse_coursework,group_hse_student_se3,1,0,0,0
+access_hse_coursework_student_se4,hse.coursework.student_se4,model_hse_coursework,group_hse_student_se4,1,0,0,0
 access_hse_coursework_teacher,hse.coursework.teacher,model_hse_coursework,group_hse_teacher,1,1,1,1
 access_hse_coursework_manager,hse.coursework.manager,model_hse_coursework,group_hse_manager,1,1,1,1
 access.reject.project.wizard,access_reject_project_wizard,om_hse.model_reject_project_wizard,base.group_user,1,1,1,1
