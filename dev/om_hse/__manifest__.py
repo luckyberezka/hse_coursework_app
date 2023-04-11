@@ -6,9 +6,11 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        'wizard/reject_project_view.xml',
+        'wizard/reject_coursework_view.xml',
+        'wizard/apply_coursework_view.xml',
         'views/menu.xml',
         'views/coursework.xml',
+        'views/student.xml',
     ],
     'application': True,
     'installable': True,

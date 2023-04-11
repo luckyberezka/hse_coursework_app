@@ -12,5 +12,10 @@
     <menuitem id="menu_courseworks"
         name="Courseworks"
         sequence="10"
-        parent="menu_hse_operations"/>
+        parent="menu_hse_root"/>
+
+    <menuitem id="menu_students"
+        name="Applications"
+        sequence="10"
+        parent="menu_hse_root"/>
 </odoo>

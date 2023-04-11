@@ -64,7 +64,13 @@ class HseCoursework(models.Model):
         string='Status',
         required=True,
     )
-    # owner = fields.Char(string='Title(en)', required=True, tracking=True)
+
+    def _owner_get(self):
+        record = self.env['res.users'].search([('name', '=', self.env.user.name)])
+        return record.name
+
+    owner = fields.Char(string="Owner name", default=_owner_get, readonly=True)
+    reject_reason = fields.Text(string="Reason", readonly=True)
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -74,12 +80,11 @@ class HseCoursework(models.Model):
         for rec in self:
             rec.state = 'on_approval'
 
-    def action_rejected(self):
+    def action_rejected(self, reason):
         for rec in self:
+            rec.reject_reason = reason
             rec.state = 'rejected'
             rec.is_approved = False
-        # action = self.env.ref('om_hse.action_reject_project').read()[0]
-        # return action
 
     def action_approve(self):
         for rec in self:
