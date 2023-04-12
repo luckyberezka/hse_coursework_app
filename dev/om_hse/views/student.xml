@@ -5,10 +5,30 @@
         <field name="model">hse.student</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_accepted" string="Accept"
+                            confirm="Are you sure you want to accept this student?"
+                            type="object" groups="om_hse.group_hse_teacher" states="under_consideration"/>
+                    <button name="action_rejected" string="Reject"
+                            confirm="Are you sure you want to reject this student?"
+                            type="object" groups="om_hse.group_hse_teacher" states="under_consideration"/>
+                    <field name="state" widget="statusbar" nolabel="1"
+                           statusbar_visible="under_consideration"/>
+                </header>
                 <sheet>
                     <group>
+                        <field name="student_name"/>
+                        <field name="title"/>
+                        <field name="course"/>
+                        <field name="program"/>
+                        <field name="state"/>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"
+                           options="{'post_refresh': 'recipients'}"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>
@@ -18,8 +38,19 @@
         <field name="name">hse.student.tree</field>
         <field name="model">hse.student</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="student_name"/>
+            <tree create="0"
+                  decoration-success="state == 'accepted'"
+                  decoration-danger="state == 'rejected'"
+                  decoration-warning="state == 'under_consideration'">
+            <field name="student_name"/>
+            <field name="title"/>
+            <field name="course"/>
+            <field name="program"/>
+            <field name="state"
+                       decoration-success="state == 'accepted'"
+                       decoration-danger="state == 'rejected'"
+                       decoration-warning="state == 'under_consideration'"
+                       widget="badge"/>
             </tree>
         </field>
     </record>
@@ -29,6 +60,9 @@
         <field name="model">hse.student</field>
         <field name="arch" type="xml">
             <search>
+                <searchpanel class="account_root">
+                    <field name="state" icon="fa-list-ul"/>
+                </searchpanel>
             </search>
         </field>
     </record>
