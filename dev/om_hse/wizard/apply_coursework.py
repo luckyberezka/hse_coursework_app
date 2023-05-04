@@ -6,7 +6,7 @@ class ApplyCourseworkWizard(models.TransientModel):
     _description = "Apply Coursework Wizard"
 
     coursework_id = fields.Many2one(comodel_name='hse.coursework', string="ID")
-    comment = fields.Text(string="Comment")
+    reason = fields.Text(string="Comment")
 
     @api.model
     def default_get(self, fields):

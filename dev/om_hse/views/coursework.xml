@@ -75,11 +75,36 @@
                 <field name="en_title"/>
                 <field name="owner"/>
                 <field name="coursework_format" />
-<!--                <filter name="filter_draft" string="Draft" domain="[('state', '=', 'draft')]"/>-->
-<!--                <filter name="filter_on_approval" string="On approval" domain="[('state', '=', 'on_approval')]"/>-->
-<!--                <filter name="filter_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>-->
-<!--                <filter name="filter_enrolling_participants" string="Enrolling Participants" domain="[('state', '=', 'enrolling_participants')]"/>-->
-<!--                <filter name="filter_enrollment_complete" string="Enrollment Complete" domain="[('state', '=', 'enrollment_complete')]"/>-->
+
+
+                <filter name="filter_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_on_approval" string="On approval" domain="[('state', '=', 'on_approval')]"/>
+                <filter name="filter_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+                <filter name="filter_enrolling_participants" string="Enrolling Participants" domain="[('state', '=', 'enrolling_participants')]"/>
+                <filter name="filter_enrollment_complete" string="Enrollment Complete" domain="[('state', '=', 'enrollment_complete')]"/>
+
+
+                <filter name="filter_moscow_branch" string="Moscow branch" domain="[('branch', '=', 'moscow')]"/>
+                <filter name="filter_petersburg_branch" string="St. Petersburg branch" domain="[('branch', '=', 'st. petersburg')]"/>
+                <filter name="filter_novgorod_branch" string="Nizhny Novgorod branch" domain="[('branch', '=', 'nizhny novgorod')]"/>
+
+                <filter name="filter_ami_program" string="AMI" domain="[('educational_program', '=', 'applied mathematics and informatics')]"/>
+                <filter name="filter_se_program" string="SE" domain="[('educational_program', '=', 'software engineering')]"/>
+                <filter name="filter_ada_program" string="ADA" domain="[('educational_program', '=', 'applied data analysis')]"/>
+                <filter name="filter_csda_program" string="CSDA" domain="[('educational_program', '=', 'computer science and data analysis')]"/>
+                <filter name="filter_eda_program" string="EDA" domain="[('educational_program', '=', 'economics and data analysis')]"/>
+
+
+                <filter name="filter_rus_language" string="Russian language" domain="[('language', '=', 'russian')]"/>
+                <filter name="filter_en_language" string="English language" domain="[('language', '=', 'english')]"/>
+
+                <filter name="filter_thesis_type" string="Thesis" domain="[('coursework_type', '=', 'student\'s graduate thesis')]"/>
+                <filter name="filter_coursework_type" string="Coursework" domain="[('coursework_type', '=', 'coursework')]"/>
+
+
+                <filter name="filter_academic_format" string="Academic format" domain="[('coursework_format', '=', 'academic')]"/>
+                <filter name="filter_startup_format" string="Startup format" domain="[('coursework_format', '=', 'startup')]"/>
+                <filter name="filter_project_format" string="Project format" domain="[('coursework_format', '=', 'project')]"/>
 <!--                <group expand="0" string="Group By">-->
 <!--                        <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>-->
 <!--                </group>-->
