@@ -21,6 +21,7 @@
                         <field name="title"/>
                         <field name="course"/>
                         <field name="program"/>
+                        <field name="reason"/>
                         <field name="state"/>
                     </group>
                 </sheet>

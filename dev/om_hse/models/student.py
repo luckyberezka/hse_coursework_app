@@ -7,6 +7,8 @@ class HseStudent(models.Model):
     _description = 'Student Apply'
 
     student_name = fields.Char(string='Name', readonly=True)
+    student_id = fields.Integer()
+    reason = fields.Text(string="Comment")
     course = fields.Integer(string='Course', readonly=True)
     educational_program = fields.Selection(
         [
