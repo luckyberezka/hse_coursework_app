@@ -22,6 +22,7 @@
                         <field name="course"/>
                         <field name="program"/>
                         <field name="reason"/>
+                        <field name="cv" />
                         <field name="state"/>
                     </group>
                 </sheet>

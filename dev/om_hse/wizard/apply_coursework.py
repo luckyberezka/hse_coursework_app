@@ -7,6 +7,8 @@ class ApplyCourseworkWizard(models.TransientModel):
 
     coursework_id = fields.Many2one(comodel_name="hse.coursework", string="ID")
     reason = fields.Text(string="Comment")
+    cv = fields.Binary(string='CV')
+
 
     @api.model
     def default_get(self, fields):
@@ -44,7 +46,8 @@ class ApplyCourseworkWizard(models.TransientModel):
             "program": educational_program,
             "title": leads.en_title,
             "reason": self.reason,
-            "coursework_id": self.coursework_id.id
+            "coursework_id": self.coursework_id.id,
+            "cv": self.cv
         }
 
         prev_application = self.env["hse.student"].search(

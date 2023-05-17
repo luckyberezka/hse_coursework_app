@@ -11,6 +11,7 @@ class HseStudent(models.Model):
     student_id = fields.Integer()
     coursework_id = fields.Integer()
     reason = fields.Text(string="Comment")
+    cv = fields.Binary(string='CV')
     course = fields.Integer(string='Course', readonly=True)
     educational_program = fields.Selection(
         [

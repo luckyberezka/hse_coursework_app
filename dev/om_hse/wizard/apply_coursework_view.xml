@@ -9,6 +9,7 @@
                     <group>
                         <!-- <field name="coursework_id"/> -->
                         <field name="reason"/>
+                        <field name="cv"/>
                     </group>
                     <group>
                     </group>
