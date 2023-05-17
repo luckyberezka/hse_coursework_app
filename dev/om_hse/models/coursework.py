@@ -5,6 +5,7 @@ class HseCoursework(models.Model):
     _name = 'hse.coursework'
     _inherit = 'mail.thread'
     _description = 'record with info about new hse coursework'
+    _rec_name = "en_title"
 
     is_approved = fields.Boolean(string='Is approved?', groups='om_hse.group_hse_manager', default=False)
     en_title = fields.Char(string='Title(en)', required=True, tracking=True)
