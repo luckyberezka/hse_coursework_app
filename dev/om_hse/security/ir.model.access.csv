@@ -13,4 +13,4 @@ access.reject.coursework.wizard,access_reject_coursework_wizard,om_hse.model_rej
 access.apply.coursework.wizard,access_apply_coursework_wizard,om_hse.model_apply_coursework_wizard,base.group_user,1,1,1,1
 access_hse_student_student,hse.student.student,model_hse_student,group_hse_student,1,1,1,1
 access_hse_student_manager,hse.student.manager,model_hse_student,group_hse_manager,1,1,1,1
-access_hse_student_teacher,hse.student.teacher,model_hse_student,group_hse_teacher,1,0,0,0
+access_hse_student_teacher,hse.student.teacher,model_hse_student,group_hse_teacher,1,1,0,0
