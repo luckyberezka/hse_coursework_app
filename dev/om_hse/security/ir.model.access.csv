@@ -10,6 +10,7 @@ access_hse_coursework_student_se4,hse.coursework.student_se4,model_hse_coursewor
 access_hse_coursework_teacher,hse.coursework.teacher,model_hse_coursework,group_hse_teacher,1,1,1,1
 access_hse_coursework_manager,hse.coursework.manager,model_hse_coursework,group_hse_manager,1,1,1,1
 access.reject.coursework.wizard,access_reject_coursework_wizard,om_hse.model_reject_coursework_wizard,base.group_user,1,1,1,1
-access.hse.coursework,access_hse_coursework,om_hse.model_hse_coursework,base.group_user,1,1,1,1
 access.apply.coursework.wizard,access_apply_coursework_wizard,om_hse.model_apply_coursework_wizard,base.group_user,1,1,1,1
-access.hse.student,access_hse_student,om_hse.model_hse_student,base.group_user,1,1,1,1
+access_hse_student_student,hse.student.student,model_hse_student,group_hse_student,1,1,1,1
+access_hse_student_manager,hse.student.manager,model_hse_student,group_hse_manager,1,1,1,1
+access_hse_student_teacher,hse.student.teacher,model_hse_student,group_hse_teacher,1,0,0,0
