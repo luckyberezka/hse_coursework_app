@@ -6,8 +6,8 @@ class ApplyCourseworkWizard(models.TransientModel):
     _description = "Apply Coursework Wizard"
 
     coursework_id = fields.Many2one(comodel_name="hse.coursework", string="ID")
-    reason = fields.Text(string="Comment")
-    cv = fields.Binary(string='CV')
+    reason = fields.Text(string="Comment", required=True)
+    cv = fields.Binary(string='CV', required=True)
 
 
     @api.model
