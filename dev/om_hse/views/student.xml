@@ -39,7 +39,7 @@
         <field name="name">hse.student.tree</field>
         <field name="model">hse.student</field>
         <field name="arch" type="xml">
-            <tree create="0"
+            <tree create="false"
                   decoration-success="state == 'accepted'"
                   decoration-danger="state == 'rejected'"
                   decoration-warning="state == 'under_consideration'">

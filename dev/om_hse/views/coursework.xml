@@ -4,7 +4,7 @@
         <field name="name">hse.coursework.form</field>
         <field name="model">hse.coursework</field>
         <field name="arch" type="xml">
-            <form>
+            <form create="false">
                 <header>
                     <button name="action_on_approval" string="Submit For Approval" type="object" groups="om_hse.group_hse_teacher" states="draft,rejected"/>
                     <button name="action_approve" string="Approve"
