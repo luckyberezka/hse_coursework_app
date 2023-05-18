@@ -24,13 +24,13 @@ class ApplyCourseworkWizard(models.TransientModel):
         educational_program = None
 
         for i in range(1, 5):
-            if user.has_group(f"hse.group_hse_student_ami{i}"):
+            if user.has_group(f"om_hse.group_hse_student_ami{i}"):
                 course = i
                 educational_program = "Applied Mathematics and Informatics"
                 break
 
         for i in range(1, 5):
-            if user.has_group(f"hse.group_hse_student_se{i}"):
+            if user.has_group(f"om_hse.group_hse_student_se{i}"):
                 course = i
                 educational_program = "Software Engineering"
                 break
