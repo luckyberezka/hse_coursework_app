@@ -12,8 +12,10 @@
                             type="object" groups="om_hse.group_hse_manager" states="on_approval"/>
                     <button name="%(om_hse.action_reject_coursework)d" string="Reject"
                             type="action" groups="om_hse.group_hse_manager" states="on_approval"/>
+                    <button name="action_finish_enrolling" string="Finish enrolling" confirm="Are you sure you want to close enrollment on this topic?" type="object" groups="om_hse.group_hse_teacher" states="enrolling_participants"/>
+                    <button name="action_reopen" string="Reopen" confirm="Are you sure you want to reopen enrollment on this topic?" type="object" groups="om_hse.group_hse_teacher" states="enrollment_complete"/>
                     <button name="%(om_hse.action_apply_coursework)d" string="Apply"
-                            type="action" states="enrolling_participants"/>
+                            type="action" groups="om_hse.group_hse_student" states="enrolling_participants"/>
                     <field name="state" widget="statusbar" nolabel="1"
                            statusbar_visible="draft,on_approval,enrolling_participants,enrollment_complete"/>
                 </header>

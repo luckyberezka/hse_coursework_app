@@ -91,3 +91,11 @@ class HseCoursework(models.Model):
         for rec in self:
             rec.state = 'enrolling_participants'
             rec.is_approved = True
+
+    def action_finish_enrolling(self):
+        for rec in self:
+            rec.state = 'enrollment_complete'
+
+    def action_reopen(self):
+        for rec in self:
+            rec.state = 'enrolling_participants'
