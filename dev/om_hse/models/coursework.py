@@ -11,25 +11,10 @@ class HseCoursework(models.Model):
     en_title = fields.Char(string='Title(en)', required=True, tracking=True)
     ru_title = fields.Char(string='Title(ru)', required=True, tracking=True)
     description = fields.Text(string='Description')
-    education_level = fields.Char(string='Education level', required=True, tracking=True)
-    branch = fields.Selection(
-        [('moscow', 'Moscow'), ('st. petersburg', 'St. Petersburg'), ('nizhny novgorod', 'Nizhny Novgorod')],
-        string='Branch',
-        tracking=True,
-        required=True,
-    )
-    faculty = fields.Selection(
-        [('computer science faculty', 'Computer Science Faculty')],
-        string='Faculty',
-        required=True,
-    )
     educational_program = fields.Selection(
         [
             ('applied mathematics and informatics', 'Applied Mathematics and Informatics'),
             ('software engineering', 'Software Engineering'),
-            ('applied data analysis', 'Applied Data Analysis'),
-            ('computer science and data analysis', 'Computer Science and Data Analysis'),
-            ('economics and data analysis', 'Economics and Data Analysis'),
 
         ],
         string='Educational program',
@@ -47,7 +32,7 @@ class HseCoursework(models.Model):
         required=True,
     )
     coursework_format = fields.Selection(
-        [('academic', 'Academic'), ('project', 'Project'), ('startup', 'Startup')],
+        [('academic', 'Academic'), ('project', 'Project')],
         string='Coursework format',
         required=True,
     )

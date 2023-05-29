@@ -17,9 +17,6 @@ class HseStudent(models.Model):
         [
             ('applied mathematics and informatics', 'Applied Mathematics and Informatics'),
             ('software engineering', 'Software Engineering'),
-            ('applied data analysis', 'Applied Data Analysis'),
-            ('computer science and data analysis', 'Computer Science and Data Analysis'),
-            ('economics and data analysis', 'Economics and Data Analysis'),
 
         ],
         string='Educational program',
