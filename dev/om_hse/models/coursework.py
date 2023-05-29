@@ -15,7 +15,7 @@ class HseCoursework(models.Model):
         [
             ('applied mathematics and informatics', 'Applied Mathematics and Informatics'),
             ('software engineering', 'Software Engineering'),
-
+            ('both', 'Applied Mathematics and Informatics/Software Engineering'),
         ],
         string='Educational program',
         required=True,
@@ -37,6 +37,11 @@ class HseCoursework(models.Model):
         required=True,
     )
     course = fields.Integer(string='Course', required=True)
+    @api.constrains('course')
+    def _check_field_name(self):
+        if self.course not in [1, 2, 3, 4]:
+            raise ValueError('Invalid course value')
+
     state = fields.Selection(
         [
             ('draft', 'Draft'),
